@@ -1,0 +1,7 @@
+<app-table
+  [displayedColumns]="displayedColumn"
+  [dataSource]="dataSource$ | async"
+  [columns]="columns"
+  (clickRow)="onClickRow($event)"
+></app-table>
+<app-audio-player *ngIf="selectAudio$ | async as sel" [srcData]="sel"></app-audio-player>
