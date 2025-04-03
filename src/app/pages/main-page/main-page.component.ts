@@ -9,7 +9,7 @@ import { AudioServiceService } from "src/app/services/audio-service.service";
   styleUrls: ["./main-page.component.scss"],
 })
 export class MainPageComponent {
-  readonly displayedColumn: string[] = ["ID", "Название песни", "Название файла"];
+  readonly displayedColumn: string[] = ["ID", "Наименование звука", "Имя файла звукозаписи"];
   readonly columns: string[] = ["id", "name", "audioName"];
   dataSource$: Observable<AudioModel[]> = this.audioServiceService.getAudioList();
   selectAudio$: Observable<null | string> = of(null);
